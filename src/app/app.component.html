@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngIf="flag">
+    <div class="col-sm-12">
+      <ul class="list-group">
+        <li *ngFor="let server of servers;let i = index" class="list-group-item">
+        {{i + 1}}  {{server.name}} - {{server.status}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button [ngClass]="flag ? 'green' :'red'" class="btn btn-primary" (click)="ShowRecords()">ShowRecords</button>
+</div>
